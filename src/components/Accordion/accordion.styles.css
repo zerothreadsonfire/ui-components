@@ -6,6 +6,11 @@
   overflow-x: hidden;
 }
 
+.container {
+  width: 100%;
+  padding: 0 0.75rem;
+}
+
 .accordion-item {
   margin-bottom: 1rem;
   width: 33%;
