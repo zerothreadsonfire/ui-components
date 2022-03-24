@@ -1,0 +1,7 @@
+.accordion-item--collapse {
+  display: none;
+}
+
+.accordion-item--expand {
+  display: block;
+}
