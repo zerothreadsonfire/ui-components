@@ -1,3 +1,4 @@
+console.log("something");
 const ACCORDION_COMPONENT = document.querySelector(".cmp-accordion");
 const ACCORDION_ITEMS_LIST = ACCORDION_COMPONENT.querySelectorAll(".accordion-item");
 
