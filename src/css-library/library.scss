@@ -1,0 +1,76 @@
+@use "sass:map";
+
+// Containers && Grid && Display
+.container {
+  max-width: 1300px;
+  padding: 0 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+// Background Colors
+.bg-primary { background-color: $primary; }
+.bg-secondary { background-color: $secondary; }
+.bg-success { background-color: $success; }
+.bg-info { background-color: $info; }
+.bg-warning { background-color: $warning; }
+.bg-danger { background-color: $danger; }
+.bg-light { background-color: $light; }
+.bg-dark { background-color: $dark; }
+
+// Text Colors
+.text-primary { color: $primary; }
+.text-secondary { color: $secondary; }
+.text-success { color: $success; }
+.text-info { color: $info; }
+.text-warning { color: $warning; }
+.text-danger { color: $danger; }
+.text-light { color: $light; }
+.text-dark { color: $dark; }
+
+// Spacing
+.m-0 { margin: map.get($spacers, 0);}
+.m-1 { margin: map.get($spacers, 1);}
+.m-2 { margin: map.get($spacers, 2);}
+.m-3 { margin: map.get($spacers, 3);}
+.m-4 { margin: map.get($spacers, 4);}
+.m-5 { margin: map.get($spacers, 5);}
+
+.mx-0 { margin: 0 map.get($spacers, 0);}
+.mx-1 { margin: 0 map.get($spacers, 1);}
+.mx-2 { margin: 0 map.get($spacers, 2);}
+.mx-3 { margin: 0 map.get($spacers, 3);}
+.mx-4 { margin: 0 map.get($spacers, 4);}
+.mx-5 { margin: 0 map.get($spacers, 5);}
+
+.my-0 { margin: map.get($spacers, 0) 0;}
+.my-1 { margin: map.get($spacers, 1) 0;}
+.my-2 { margin: map.get($spacers, 2) 0;}
+.my-3 { margin: map.get($spacers, 3) 0;}
+.my-4 { margin: map.get($spacers, 4) 0;}
+.my-5 { margin: map.get($spacers, 5) 0;}
+
+.p-0 { padding: map.get($spacers, 0);}
+.p-1 { padding: map.get($spacers, 1);}
+.p-2 { padding: map.get($spacers, 2);}
+.p-3 { padding: map.get($spacers, 3);}
+.p-4 { padding: map.get($spacers, 4);}
+.p-5 { padding: map.get($spacers, 5);}
+
+.px-0 { padding: 0 map.get($spacers, 0);}
+.px-1 { padding: 0 map.get($spacers, 1);}
+.px-2 { padding: 0 map.get($spacers, 2);}
+.px-3 { padding: 0 map.get($spacers, 3);}
+.px-4 { padding: 0 map.get($spacers, 4);}
+.px-5 { padding: 0 map.get($spacers, 5);}
+
+.py-0 { padding: map.get($spacers, 0) 0;}
+.py-1 { padding: map.get($spacers, 1) 0;}
+.py-2 { padding: map.get($spacers, 2) 0;}
+.py-3 { padding: map.get($spacers, 3) 0;}
+.py-4 { padding: map.get($spacers, 4) 0;}
+.py-5 { padding: map.get($spacers, 5) 0;}
+
+// Utilities

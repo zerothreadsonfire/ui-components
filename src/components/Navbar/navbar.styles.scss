@@ -1,0 +1,23 @@
+body {
+  height: 3000px;
+}
+
+.cmp-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // .nav-logo {
+  //   background: url("../../../assets/logo.png");
+  // }
+
+  .nav-link {
+    padding: 1rem 1.9rem;
+  
+    a:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+}
+
