@@ -3,13 +3,22 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
-    main: path.join(__dirname, "src/index.js")
+    bundle: [
+      path.join(__dirname, "src/index.js"),
+      path.join(__dirname, "src/components/components.imports.scss"),
+    ],
   },
   output: {
     path: path.join(__dirname, "dist/"),
-    filename: "bundle.js"
+    filename: "[name].js"
+  },
+  devServer: {
+    static: path.join(__dirname, "src/"),
+    open: true,
+    hot: true,
+    port: 9001
   },
   module: {
     rules: [
@@ -27,10 +36,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "User Interface Components",
       filename: "index.html",
-      template: "src/components/Accordion/accordion.html"
+      template: "index.html"
     }),
-    new MiniCssExtractPlugin({
-      filename: 'styles.css'
-    })
+    new MiniCssExtractPlugin()
   ]
 }
