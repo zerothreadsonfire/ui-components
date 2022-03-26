@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     bundle: [
       path.join(__dirname, "src/index.js"),
-      path.join(__dirname, "src/components/components.imports.scss"),
+      path.join(__dirname, "src/index.scss"),
     ],
   },
   output: {
