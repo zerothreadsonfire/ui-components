@@ -1,4 +1,3 @@
-console.log("something");
 const ACCORDION_COMPONENT = document.querySelector(".cmp-accordion");
 // const ACCORDION_ITEMS_LIST = ACCORDION_COMPONENT.querySelectorAll(".accordion-item");
 
@@ -14,4 +13,4 @@ const ACCORDION_COMPONENT = document.querySelector(".cmp-accordion");
 //       e.currentTarget.classList.add("accordion-item--expand")
 //   }
 // }
-console.log(ACCORDION_COMPONENT);
+// console.log(ACCORDION_COMPONENT);

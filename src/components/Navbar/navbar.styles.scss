@@ -28,6 +28,8 @@ $white: #fff;
   padding: 0 3rem;
   background-color: $bg-color-1;
   position: fixed;
+  z-index: 101;
+  transition: transform 0.2s;
 
   .nav-logo {
     img {
@@ -37,13 +39,12 @@ $white: #fff;
     }
   }
 
-  .nav__menu {
-    display: inline-block;
-    margin-left: auto;
+  .nav__list {
+    display: flex;
+    margin-left: 3rem;
 
     .nav__item {
-      display: inline-block;
-      padding: 1rem 2.9rem;
+      padding: 1rem 2.9rem 1rem 0;
       cursor: pointer;
 
       &:hover {
@@ -57,7 +58,7 @@ $white: #fff;
   }
 
   .nav__login {
-
+    margin-left: auto;
   }
 }
 
@@ -73,6 +74,14 @@ $white: #fff;
 
 .scroll-up {
   // transform: translate(0, -100px)
+}
+
+// Hero Banner
+.cmp-hero {
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
 }
 
 
