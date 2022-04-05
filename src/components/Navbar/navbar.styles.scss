@@ -42,24 +42,56 @@ $white: #fff;
   .nav__list {
     display: flex;
     margin-left: 3rem;
+  }
 
-    .nav__item {
-      padding: 1rem 2.9rem 1rem 0;
-      cursor: pointer;
+  .nav__item {
+    padding: 1rem 2.9rem 1rem 0;
+    cursor: pointer;
 
-      &:hover {
-        opacity: 0.5;
-      }
+    &:hover {
+      opacity: 0.5;
+    }
 
-      .nav-link {
-        color: $white;
-      }
+    .nav-link {
+      font-size: 1.1rem;
+      color: $white;
     }
   }
 
   .nav__login {
     margin-left: auto;
   }
+}
+
+.navbar--alt-style {
+  transition: all 0.2s;
+  background-color: #ccc;
+
+  .nav-logo {
+    img {
+      color: $bg-color-1;
+    }
+  }
+
+  .nav__item {
+    .nav-link {
+      color: $bg-color-1;
+    }
+
+    &:hover {
+      font-weight: bold;
+      opacity: 1;
+    }    
+  }
+
+  .nav__login {
+    margin-left: auto;
+
+    > button {
+      background-color: #002b5c;
+      color: #ccc;
+    }
+  }  
 }
 
 .btn {
@@ -77,10 +109,31 @@ $white: #fff;
 }
 
 // Hero Banner
-.cmp-hero {
+.cmp-banner {
   img {
     object-fit: contain;
     width: 100%;
+  }
+}
+
+// Section 1
+
+.card__wrapper {
+  background-color: #002b5c;
+}
+
+.card {
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  margin: 1rem;
+  transition: background 1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &.show  {
+    background: #008a00;
   }
 }
 
