@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const StyleLintPlugin = require("stylelint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -23,12 +24,30 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [ 
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                sourceMap: true,
+              },
+            },
+          },
+        ],
       },
     ]
   },
@@ -38,6 +57,9 @@ module.exports = {
       filename: "index.html",
       template: "index.html"
     }),
-    new MiniCssExtractPlugin()
+    // new StyleLintPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    }),
   ]
 }
